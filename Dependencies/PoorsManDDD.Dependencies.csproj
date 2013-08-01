@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E7227F9-FB10-415E-9F3C-AD9E4D04BC6E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PoorsManDDD.Dependencies</RootNamespace>
+    <AssemblyName>PoorsManDDD.Dependencies</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CrossDomain.Ninject\PoorsManDDD.CrossDomain.Ninject.csproj">
+      <Project>{137df263-a50a-45d2-9d57-4fb2b6fc7c53}</Project>
+      <Name>PoorsManDDD.CrossDomain.Ninject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrossDomain\PoorsManDDD.CrossDomain.csproj">
+      <Project>{b1020c18-5603-4173-8b31-95fa0e3cee60}</Project>
+      <Name>PoorsManDDD.CrossDomain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\PoorsManDDD.Data.csproj">
+      <Project>{354aac3e-f338-4869-9264-a6e022594fbc}</Project>
+      <Name>PoorsManDDD.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\PoorsManDDD.Domain.csproj">
+      <Project>{1832472c-f9c0-4f89-9df5-65a8340b7412}</Project>
+      <Name>PoorsManDDD.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services.Contracts\PoorsManDDD.Services.Contracts.csproj">
+      <Project>{e4a14e9e-013f-4285-9542-c21205a41344}</Project>
+      <Name>PoorsManDDD.Services.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\PoorsManDDD.Services.csproj">
+      <Project>{dd28278d-1130-4039-945a-0a7610be25e2}</Project>
+      <Name>PoorsManDDD.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web.Configuration\PoorsManDDD.Web.Configuration.csproj">
+      <Project>{3401e77d-405d-4cad-9e11-12afa9c6e061}</Project>
+      <Name>PoorsManDDD.Web.Configuration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
