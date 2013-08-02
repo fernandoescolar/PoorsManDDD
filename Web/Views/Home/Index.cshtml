@@ -14,7 +14,7 @@
         <ul data-bind="foreach: tasks, visible: tasks().length > 0">
             <li>
                 <input type="checkbox" data-bind="checked: isDone, disable: isDone" />
-                <span data-bind="text: title" />
+                <span data-bind="text: title, css: isDone() ? 'task-done' : 'task-todo'" />
                
             </li> 
         </ul>
