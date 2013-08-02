@@ -288,10 +288,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dependencies\PoorsManDDD.Dependencies.csproj">
-      <Project>{0e7227f9-fb10-415e-9f3c-ad9e4d04bc6e}</Project>
-      <Name>PoorsManDDD.Dependencies</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Services.Contracts\PoorsManDDD.Services.Contracts.csproj">
       <Project>{e4a14e9e-013f-4285-9542-c21205a41344}</Project>
       <Name>PoorsManDDD.Services.Contracts</Name>

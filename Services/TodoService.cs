@@ -36,7 +36,7 @@ namespace PoorsManDDD.Services
             var entity = this.entityFactory.Create<ITodoItem>();
             entity.Id = Guid.NewGuid();
             entity.DateCreation = DateTime.Now;
-            entity.LastModificationDate = DateTime.MinValue;
+            entity.LastModificationDate = DateTime.Now;
             entity.Name = item.Name;
             entity.State = TodoState.NotStarted;
 

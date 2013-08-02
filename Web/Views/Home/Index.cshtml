@@ -6,6 +6,18 @@
 <div id="body">
     <section class="content-wrapper main-content clear-fix">
         <h3>My TO DO List:</h3>
-        
+        <form data-bind="submit: addTask">
+            <input data-bind="value: newTaskText" placeholder="What needs to be done?" />
+            <button type="submit">Add</button>
+        </form>
+
+        <ul data-bind="foreach: tasks, visible: tasks().length > 0">
+            <li>
+                <input type="checkbox" data-bind="checked: isDone, disable: isDone" />
+                <span data-bind="text: title" />
+               
+            </li> 
+        </ul>
+
     </section>
 </div>
